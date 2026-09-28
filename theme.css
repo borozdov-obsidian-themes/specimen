@@ -1,0 +1,580 @@
+/*
+  Borozdov Specimen — an Obsidian theme from the Borozdov collection.
+  Two faces: Proof (light, a type specimen museum on white paper) and
+  Matrix (dark, the same specimens cast in reverse). A giant display
+  face, square hairline boxes, small labels tracked open and no colour
+  at all.
+  https://github.com/borozdov-obsidian-themes/specimen
+
+  License: MIT (this file).
+  Embedded font, SIL Open Font License 1.1 (https://openfontlicense.org):
+  Poiret One, Copyright (c) 2011 Denis Masharov.
+*/
+
+/* ===== 0. FONT =====
+   Poiret One, Latin and Cyrillic, for the title, the three largest
+   headings and pull quotes. */
+
+/* FONTS:GENERATED:START — produced by scripts/embed-fonts.py, do not hand-edit */
+@font-face {
+  font-family: "Poiret One";
+  src: url("data:font/woff2;base64,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") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+2000-206F,U+2074,U+20AC,U+20BD,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Poiret One";
+  src: url("data:font/woff2;base64,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") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F,U+0490-0491,U+2116;
+}
+
+/* FONTS:GENERATED:END */
+
+/* ===== 1. PALETTE =====
+   Only these values differ by face. One white holds everything, from the
+   side panels to the note; 1px hairlines draw every box. Black ink, a
+   grey for what is quieter, and inversion instead of colour: the
+   highlighter, the main button and the open file are white on black. By
+   night the whole sheet is cast in reverse. Red is kept only for
+   destructive buttons. */
+
+.theme-light {
+  color-scheme: light;
+
+  --canvas: #fff;
+  --hover: #f2f2f2;
+  --wash: #f2f2f2;
+  --hairline: #d6d6d6;
+  --strong: #000;
+  --tertiary: #6b6b6b;
+  --slate: #4d4d4d;
+  --text: #1a1818;
+  --ink: #000;
+  --on-ink: #fff;
+  --veil: rgb(0 0 0 / 14%);
+  --scrim: rgb(255 255 255 / 70%);
+  --on-warning: #fff;
+  --accent-h: 0;
+  --accent-s: 0%;
+  --accent-l: 0%;
+  --color-red: #b42318;
+  --color-orange: #9a4a06;
+  --color-yellow: #735c00;
+  --color-green: #1d6b3c;
+  --color-cyan: #0e6b78;
+  --color-blue: #1f5fa8;
+  --color-purple: #5b45b0;
+  --color-pink: #a3306c;
+  --color-red-rgb: 180, 35, 24;
+  --color-orange-rgb: 154, 74, 6;
+  --color-yellow-rgb: 115, 92, 0;
+  --color-green-rgb: 29, 107, 60;
+  --color-cyan-rgb: 14, 107, 120;
+  --color-blue-rgb: 31, 95, 168;
+  --color-purple-rgb: 91, 69, 176;
+  --color-pink-rgb: 163, 48, 108;
+  --code-comment: #6b6b6b;
+  --code-function: #000;
+  --code-keyword: #000;
+  --code-operator: #4d4d4d;
+  --code-property: #1a1818;
+  --code-punctuation: #6b6b6b;
+  --code-string: #4d4d4d;
+  --code-tag: #000;
+  --code-value: #1a1818;
+  --code-important: #000;
+}
+
+.theme-dark {
+  color-scheme: dark;
+
+  --canvas: #000;
+  --hover: #1a1a1a;
+  --wash: #1a1a1a;
+  --hairline: #333;
+  --strong: #fff;
+  --tertiary: #9d9d9d;
+  --slate: #bdbdbd;
+  --text: #ededed;
+  --ink: #fff;
+  --on-ink: #000;
+  --veil: rgb(255 255 255 / 20%);
+  --scrim: rgb(0 0 0 / 70%);
+  --on-warning: #fff;
+  --accent-h: 0;
+  --accent-s: 0%;
+  --accent-l: 100%;
+  --color-red: #ff9a8a;
+  --color-orange: #ffbd7a;
+  --color-yellow: #e8d27a;
+  --color-green: #8fd9a8;
+  --color-cyan: #7fd3de;
+  --color-blue: #9ec5ff;
+  --color-purple: #c3b3ff;
+  --color-pink: #f7a0c8;
+  --color-red-rgb: 255, 154, 138;
+  --color-orange-rgb: 255, 189, 122;
+  --color-yellow-rgb: 232, 210, 122;
+  --color-green-rgb: 143, 217, 168;
+  --color-cyan-rgb: 127, 211, 222;
+  --color-blue-rgb: 158, 197, 255;
+  --color-purple-rgb: 195, 179, 255;
+  --color-pink-rgb: 247, 160, 200;
+  --code-comment: #9d9d9d;
+  --code-function: #fff;
+  --code-keyword: #fff;
+  --code-operator: #bdbdbd;
+  --code-property: #ededed;
+  --code-punctuation: #9d9d9d;
+  --code-string: #bdbdbd;
+  --code-tag: #fff;
+  --code-value: #ededed;
+  --code-important: #fff;
+}
+
+/* ===== 2. TYPE & SHAPE =====
+   A display face set huge and never bold for the title and the three
+   largest headings; the platform's sans at one weight for everything
+   else, with small labels in capitals tracked open. Every corner is
+   square. */
+
+body {
+  --font-interface-theme: -apple-system, "BlinkMacSystemFont", "Segoe UI",
+    "Roboto", "Helvetica Neue", "Arial", sans-serif;
+  --font-text-theme: -apple-system, "BlinkMacSystemFont", "Segoe UI",
+    "Roboto", "Helvetica Neue", "Arial", sans-serif;
+  --font-monospace-theme: "SFMono-Regular", "SF Mono", "JetBrains Mono",
+    ui-monospace, "Menlo", "Consolas", monospace;
+  --font-display: "Poiret One", "Avenir Next", "Futura", sans-serif;
+  --inline-title-font: var(--font-display);
+  --h1-font: var(--font-display);
+  --h2-font: var(--font-display);
+  --h3-font: var(--font-display);
+  --line-height-normal: 1.6;
+  --bold-weight: 600;
+  --radius-s: 0;
+  --radius-m: 0;
+  --radius-l: 0;
+  --radius-xl: 0;
+  --input-radius: 0;
+  --button-radius: 0;
+  --checkbox-radius: 0;
+  --checkbox-color: var(--ink);
+  --checkbox-color-hover: var(--ink);
+  --checkbox-marker-color: var(--on-ink);
+  --checkbox-border-color: var(--ink);
+  --checkbox-border-color-hover: var(--ink);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+  --h1-size: 2.6em; --h2-size: 2em; --h3-size: 1.55em;
+  --h4-size: 1.1em; --h5-size: 0.8em; --h6-size: 0.72em;
+  --h1-weight: 400; --h2-weight: 400; --h3-weight: 400;
+  --h4-weight: 400; --h5-weight: 400; --h6-weight: 400;
+  --inline-title-size: 3.6em;
+  --inline-title-weight: 400;
+  --h1-line-height: 1.05; --h2-line-height: 1.1; --h3-line-height: 1.2;
+  --h4-line-height: 1.35; --h5-line-height: 1.4; --h6-line-height: 1.4;
+  --inline-title-color: var(--ink);
+  --h1-color: var(--ink); --h2-color: var(--ink); --h3-color: var(--ink);
+  --h4-color: var(--ink); --h5-color: var(--ink); --h6-color: var(--slate);
+}
+
+.inline-title {
+  line-height: 1.02;
+}
+
+/* The two smallest headings are museum labels: capitals tracked open. */
+.markdown-rendered h5, .markdown-rendered h6,
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-header-6 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== 3. BASE VARIABLE MAPPING =====
+   Set on .theme-dark / .theme-light, where Obsidian declares them too; the
+   theme loads later and wins the tie. */
+
+.theme-dark,
+.theme-light {
+  --background-primary: var(--canvas);
+  --background-primary-alt: var(--canvas);
+  --background-secondary: var(--canvas);
+  --background-secondary-alt: var(--canvas);
+  --background-modifier-hover: var(--hover);
+  --background-modifier-active-hover: var(--hover);
+  --background-modifier-border: var(--hairline);
+  --background-modifier-border-hover: var(--strong);
+  --background-modifier-border-focus: var(--strong);
+  --background-modifier-form-field: var(--canvas);
+  --text-normal: var(--text);
+  --text-muted: var(--slate);
+  --text-faint: var(--tertiary);
+  --text-accent: var(--ink);
+  --text-accent-hover: var(--ink);
+  --text-on-accent: var(--on-ink);
+  --text-on-accent-inverted: var(--on-ink);
+  --text-selection: var(--veil);
+  --text-highlight-bg: var(--ink);
+  --color-accent: var(--ink);
+  --color-accent-1: var(--ink);
+  --color-accent-2: var(--slate);
+  --interactive-accent: var(--ink);
+  --interactive-accent-hover: var(--slate);
+  --interactive-normal: var(--canvas);
+  --interactive-hover: var(--hover);
+  --divider-color: var(--hairline);
+  --caret-color: var(--ink);
+  --tab-container-background: var(--canvas);
+  --titlebar-background: var(--canvas);
+  --titlebar-background-focused: var(--canvas);
+  --tab-outline-color: var(--hairline);
+  --ribbon-background: var(--canvas);
+  --ribbon-background-collapsed: var(--canvas);
+  --status-bar-background: var(--canvas);
+  --nav-item-background-hover: var(--hover);
+  --nav-item-background-active: var(--ink);
+  --nav-item-color-active: var(--on-ink);
+  --nav-item-background-selected: var(--hover);
+  --nav-item-color-selected: var(--ink);
+  --nav-indentation-guide-color: var(--hairline);
+  --callout-default: var(--ink);
+  --callout-info: var(--ink);
+  --callout-todo: var(--ink);
+  --callout-summary: var(--ink);
+  --callout-tip: var(--ink);
+  --callout-important: var(--ink);
+  --callout-success: var(--ink);
+  --callout-question: var(--ink);
+  --callout-warning: var(--ink);
+  --callout-fail: var(--ink);
+  --callout-error: var(--ink);
+  --callout-bug: var(--ink);
+  --callout-example: var(--ink);
+  --callout-quote: var(--slate);
+}
+
+/* The highlighter is inversion: paper-coloured type on an ink block.
+   Search matches keep Obsidian's own colours. */
+.markdown-rendered mark,
+.markdown-rendered mark .internal-link,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight:not(.obsidian-search-match-highlight) {
+  color: var(--on-ink);
+}
+
+.markdown-rendered mark {
+  padding: 0 0.2em;
+}
+
+/* Small interface labels are tracked open, as on a museum wall. */
+.status-bar, .view-header-breadcrumb, .view-header-title-parent {
+  letter-spacing: 0.04em;
+}
+
+/* ===== 4. LINKS =====
+   Ink, underlined; no colour. */
+
+body {
+  --link-color: var(--ink);
+  --link-color-hover: var(--slate);
+  --link-external-color: var(--ink);
+  --link-external-color-hover: var(--slate);
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  --link-unresolved-color: var(--ink);
+  --link-unresolved-opacity: 0.6;
+  --link-unresolved-decoration-style: dotted;
+}
+
+/* ===== 5. CALLOUTS =====
+   A square box drawn by a hairline; the title in small capitals tracked
+   open, never bold. Trouble gets a heavier rule in ink. */
+
+body {
+  --callout-border-width: 1px;
+  --callout-border-opacity: 1;
+  --callout-radius: 0;
+  --callout-padding: 1rem 1.25rem;
+  --callout-title-size: 0.74em;
+  --callout-title-weight: 400;
+  --callout-content-padding: 0.5rem 0 0;
+  --callout-blend-mode: normal;
+}
+
+.callout {
+  background-color: var(--canvas);
+  border-color: var(--hairline);
+}
+
+.callout-title-inner {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  border: 2px solid var(--strong);
+}
+
+.callout-content > :first-child { margin-top: 0; }
+.callout-content > :last-child { margin-bottom: 0; }
+
+/* ===== 6. CODE =====
+   Code blocks are hairline boxes; inline code sits on the palest wash. */
+
+body {
+  --code-background: var(--canvas);
+  --code-normal: var(--text);
+  --code-radius: 0;
+  --code-border-width: 0;
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+}
+
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  --code-background: var(--wash);
+}
+
+/* ===== 7. BLOCKQUOTE =====
+   A pull quote set in the display face, a size and a half up. */
+
+body {
+  --blockquote-border-thickness: 1px;
+  --blockquote-border-color: var(--strong);
+  --blockquote-color: var(--ink);
+  --blockquote-font-style: normal;
+}
+
+.markdown-rendered blockquote {
+  font-family: var(--font-display);
+  font-size: 1.5em;
+  line-height: 1.3;
+}
+
+/* ===== 8. TAGS =====
+   Square hairline labels in small capitals tracked open. */
+
+body {
+  --tag-size: 0.72em;
+  --tag-weight: 400;
+  --tag-radius: 0;
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.25em;
+  --tag-border-width: 1px;
+  --tag-border-color: var(--hairline);
+  --tag-border-color-hover: var(--strong);
+  --tag-color: var(--text);
+  --tag-color-hover: var(--ink);
+  --tag-background: var(--canvas);
+  --tag-background-hover: var(--canvas);
+  --tag-decoration-hover: none;
+}
+
+a.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== 9. TABLES =====
+   A hairline grid; the header in small capitals tracked open. */
+
+body {
+  --table-border-width: 1px;
+  --table-column-first-border-width: 0;
+  --table-column-last-border-width: 0;
+  --table-header-border-width: 0;
+  --table-row-last-border-width: 0;
+  --table-border-color: var(--hairline);
+  --table-header-background: var(--canvas);
+  --table-header-background-hover: var(--hover);
+  --table-header-border-color: var(--hairline);
+  --table-header-size: 0.72em;
+  --table-header-weight: 400;
+  --table-header-color: var(--ink);
+  --table-row-background-hover: var(--hover);
+  --table-row-alt-background: transparent;
+  --table-row-alt-background-hover: var(--hover);
+}
+
+.markdown-rendered table {
+  border: var(--table-border-width) solid var(--table-border-color);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.markdown-rendered th {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+/* The frame belongs to the table; cells draw only the inner grid, an end
+   and a bottom line, none on the outer edges. */
+.markdown-rendered th,
+.markdown-rendered td {
+  border-block-start-width: 0;
+  border-inline-start-width: 0;
+}
+
+.markdown-rendered tr > :last-child {
+  border-inline-end-width: 0;
+}
+
+.markdown-rendered table > :last-child > tr:last-child > * {
+  border-block-end-width: 0;
+}
+
+/* ===== 10. BUTTONS =====
+   Square. Plain buttons are paper behind a hairline; the one that matters
+   is an ink block. The copy button on a code block keeps Obsidian's own
+   quiet icon. */
+
+button:not(.clickable-icon, .copy-code-button) {
+  background-color: var(--canvas);
+  border: 1px solid var(--hairline);
+  box-shadow: none;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+@media (hover: hover) {
+  button:not(.clickable-icon, .copy-code-button):hover {
+    border-color: var(--strong);
+  }
+}
+
+button.mod-cta:not(.clickable-icon) {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--on-ink);
+}
+
+@media (hover: hover) {
+  button.mod-cta:not(.clickable-icon):hover {
+    background-color: var(--slate);
+    border-color: var(--slate);
+  }
+}
+
+button.mod-warning:not(.clickable-icon) {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--on-warning);
+}
+
+/* ===== 11. FIELDS & PROPERTIES ===== */
+
+select.dropdown, input[type="text"], input[type="search"], input[type="number"],
+textarea {
+  /* background-color, not the `background` shorthand: the shorthand resets
+     the dropdown's own arrow image. */
+  background-color: var(--background-modifier-form-field);
+  border: 1px solid var(--hairline);
+}
+
+/* No focus ring while typing: the caret and the selection already show
+   where you are. Covers form fields and every contenteditable surface. */
+select.dropdown:focus, input:focus, textarea:focus,
+select.dropdown:focus-visible, input:focus-visible, textarea:focus-visible,
+[contenteditable]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* A property's key is a label, not a field. input.* matches the frame rule
+   above at (0,1,1), so the element prefix is needed to win it. */
+input.metadata-property-key-input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8em;
+}
+
+body {
+  --pill-background: var(--canvas);
+  --pill-background-hover: var(--canvas);
+  --pill-border-color: var(--hairline);
+  --pill-border-color-hover: var(--strong);
+  --pill-color: var(--text);
+  --pill-color-hover: var(--ink);
+}
+
+/* ===== 12. SURFACES =====
+   No shadows anywhere: floating panels are paper drawn by an ink rule. */
+
+.modal-bg {
+  background-color: var(--scrim);
+}
+
+.modal, .menu, div.popover, .suggestion-container, .prompt {
+  background-color: var(--canvas);
+  border: 1px solid var(--strong);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Obsidian pads an embed only on the left, for an accent bar this theme
+   doesn't draw. Even padding all round, with room for the open-link icon. */
+body {
+  --embed-padding: var(--size-4-3) var(--size-4-8) var(--size-4-3) var(--size-4-4);
+  --embed-border-start: none;
+}
+
+.markdown-embed {
+  border: 1px solid var(--hairline);
+  border-radius: 0;
+}
+
+/* A hover preview is already a panel: the embed inside it stays flat. */
+.popover.hover-popover > .markdown-embed {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+hr, .cm-hr { border-color: var(--hairline); }
+
+/* ===== 13. MOBILE =====
+   The phone layout re-declares tag and field colors on .is-mobile.theme-*,
+   outranking the rules above; the same selectors bring them back. */
+
+.is-mobile.theme-dark,
+.is-mobile.theme-light {
+  --tag-background: var(--canvas);
+  --background-modifier-form-field: var(--canvas);
+  --background-modifier-hover: var(--hover);
+}
+
+/* ===== 14. REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    --anim-duration-superfast: 0s;
+    --anim-duration-fast: 0s;
+    --anim-duration-moderate: 0s;
+    --anim-duration-slow: 0s;
+  }
+}
