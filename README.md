@@ -35,10 +35,14 @@ face, square hairline boxes, tracked small labels and no colour at all.
 
 ## Installation
 
-**From the community directory:** Settings → Appearance → Themes → Manage, search for
-**Borozdov Specimen**, then **Install and use**.
+**From the community directory, as a variant:** this theme ships inside **Borozdov
+Utility**. Install Borozdov Utility under Settings → Appearance → Themes → Manage, then
+the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, and
+choose **Specimen** under Style Settings → Borozdov Utility → Variant. The variant brings
+this theme's palette, type and corners; its own layout, and its embedded font if it has
+one, come with the full theme below.
 
-**By hand:** download `manifest.json` and `theme.css` from the [latest
+**The full theme, by hand:** download `manifest.json` and `theme.css` from the [latest
 release](https://github.com/borozdov-obsidian-themes/specimen/releases/latest) into
 `<vault>/.obsidian/themes/Borozdov Specimen/`, then choose Borozdov Specimen under Settings
 → Appearance → Themes.
@@ -59,5 +63,4 @@ MIT — see [LICENSE](LICENSE).
 образцов на белой бумаге, и тёмный «Матрица» — те же образцы, отлитые в негативе. Огромный
 акцидентный заголовок (Poiret One), квадратные рамки в волосяную линию, мелкие подписи
 вразрядку и никакого цвета: выделение, главная кнопка и открытый файл отмечены инверсией.
-Устанавливается из каталога: Настройки → Оформление → Темы → Настроить → Borozdov Specimen →
-Установить и применить.
+В каталоге тема живёт вариантом Borozdov Utility: установите Borozdov Utility и плагин Style Settings, затем выберите Specimen в Style Settings → Borozdov Utility → Variant. Целиком, со своей вёрсткой, тема ставится вручную из последнего релиза репозитория.
